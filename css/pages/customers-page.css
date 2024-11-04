@@ -74,10 +74,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .customers-page {
-    padding: 51px 71px;
-  }
-
   .customers__container {
     display: flex;
   }
@@ -99,5 +95,14 @@
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (min-width: 1024px) {
+  .customers-page {
+    padding: 21px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .customers-page {
+    padding: 51px 71px;
+  }
 }
