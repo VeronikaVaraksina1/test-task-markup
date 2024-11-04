@@ -16,7 +16,7 @@
   align-items: center;
   gap: 8px;
 
-  margin-bottom: 48px;
+  margin-bottom: 64px;
 
   color: inherit;
   font-weight: 600;
@@ -142,7 +142,7 @@
     max-width: 306px;
     width: 306px;
     height: 100%;
-    padding: 36px 28px 76px;
+    padding: 36px 28px;
   }
 
   .header__sidebar {

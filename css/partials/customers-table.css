@@ -76,16 +76,16 @@
   }
 
   .table__cell--header {
-    padding: 24px 10px;
+    padding: 0 10px 16px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .table__cell {
-    padding: 19px 13px;
+    padding: 19px 20px;
   }
 
   .table__cell--header {
-    padding: 24px 13px;
+    padding: 0 24px 20px;
   }
 }

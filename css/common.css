@@ -41,6 +41,7 @@ a {
 }
 
 button {
+  font-family: inherit;
   border: transparent;
   background-color: transparent;
 }

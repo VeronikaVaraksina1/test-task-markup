@@ -1,11 +1,13 @@
 block vars
     - var title = 'Customers';
+    - var pages = ["1", "2", "3", "4"];
 
 block content
     .customers-page
+        h1.customers-title Hello Evano 👋🏼,
         .customers__container
             .customers__description-container
-                h2.customers__title All Customers
+                h2.customers__subtitle All Customers
                 p.customers__status Active Members
 
             .search-container 
@@ -16,3 +18,18 @@ block content
 
         include ../partials/customers-table-mobile
         include ../partials/customers-table
+
+        .page-counter
+            p.page-counter__description Showing data 1 to 8 of 256K entries
+            .page-counter__container-list
+                button(class="page-counter__button prev-page") &lt;
+
+                ul.page-counter__list
+                    each page in pages 
+                        li
+                            button.page-counter__button= page
+                    p ...
+                    li
+                        button.page-counter__button 40
+
+                button(class="page-counter__button next-page") &gt;

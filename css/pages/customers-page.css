@@ -1,6 +1,13 @@
 .customers-page {
   background: #f9fbff;
   padding: 0 8px;
+  padding-bottom: 30px;
+}
+
+.customers-title {
+  padding: 20px 8px;
+  font-weight: 500;
+  font-size: 24px;
 }
 
 .customers__container {
@@ -10,11 +17,7 @@
   border-top-right-radius: 40px;
 }
 
-.customers__description-container {
-  margin-bottom: 40px;
-}
-
-.customers__title {
+.customers__subtitle {
   font-weight: 600;
   font-size: 22px;
   letter-spacing: -0.01em;
@@ -22,6 +25,7 @@
 }
 
 .customers__status {
+  margin-bottom: 30px;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: -0.01em;
@@ -66,6 +70,70 @@
   color: #b5b7c0;
 }
 
+.page-counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 40px 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+
+  background-color: #fff;
+}
+
+.page-counter__description {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  color: #b5b7c0;
+}
+
+.page-counter__container-list {
+  display: flex;
+}
+
+.page-counter__list {
+  display: flex;
+  gap: 12px;
+}
+
+.prev-page {
+  margin-right: 12px;
+}
+
+.next-page {
+  margin-left: 12px;
+}
+
+.page-counter__button {
+  min-width: 25px;
+  height: 24px;
+  padding: 6px 8px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+
+  background-color: #f5f5f5;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  color: #404b52;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+}
+
+.page-counter__button:hover,
+.page-counter__button:focus {
+  border: 1px solid #5932ea;
+  color: #fff;
+  background-color: #5932ea;
+}
+
 @media screen and (min-width: 375px) and (max-width: 767px) {
   .search-container {
     width: 216px;
@@ -74,8 +142,8 @@
 }
 
 @media screen and (min-width: 768px) {
-  .customers__container {
-    display: flex;
+  .customers-title {
+    padding: 20px 38px;
   }
 
   .customers__container {
@@ -84,25 +152,40 @@
     padding: 30px 38px 40px;
   }
 
+  .customers__status {
+    margin-bottom: 0;
+  }
+
   .search-input {
     border: 1px solid transparent;
   }
-}
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .customers__container {
-    padding-right: 100px;
+  .page-counter {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 40px 40px;
+  }
+
+  .page-counter__description {
+    margin: 0;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .customers-page {
-    padding: 21px;
+    padding: 0 21px;
+    padding-bottom: 51px;
+  }
+
+  .customers-title {
+    padding-top: 31px;
+    padding-bottom: 51px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .customers-page {
-    padding: 51px 71px;
+    padding-left: 71px;
+    padding-right: 71px;
   }
 }
