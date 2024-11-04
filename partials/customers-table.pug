@@ -1,0 +1,30 @@
+include ../mixins/svg
+
+block vars 
+    - var customers = [{ name: "Jane Cooper", company: "Microsoft", number: "(225) 555-0118", email: "jane@microsoft.com", country: "United States", status: "Active" }, { name: "Floyd Miles", company: "Yahoo", number: "(205) 555-0100", email: "floyd@yahoo.com", country: "Kiribati", status: "Inactive" }, { name: "Ronald Richards", company: "Adobe", number: "(302) 555-0107", email: "ronald@adobe.com", country: "Israel", status: "Inactive" }, { name: "Marvin McKinney", company: "Tesla", number: "(252) 555-0126", email: "marvin@tesla.com", country: "Iran", status: "Active" }, { name: "Jerome Bell", company: "Google", number: "(629) 555-0129", email: "jerome@google.com", country: "Réunion", status: "Active" }, { name: "Kathryn Murphy", company: "Microsoft", number: "(406) 555-0120", email: "kathryn@microsoft.com", country: "Curaçao", status: "Active" }, { name: "Jacob Jones", company: "Yahoo", number: "(208) 555-0112", email: "jacob@yahoo.com", country: "Brazil", status: "Active" }, { name: "Kristin Watson", company: "Facebook", number: "(704) 555-0127", email: "kristin@facebook.com", country: "Åland Islands", status: "Inactive" }]
+
+block content
+    .table__container
+        table.table
+            thead.table__header
+                tr
+                    th.table__cell--header Customer Name
+                    th.table__cell--header Company
+                    th.table__cell--header Phone Number
+                    th.table__cell--header Email
+                    th.table__cell--header Country
+                    th.table__cell--header Status
+
+            tbody
+                each customer in customers
+                    tr
+                        td.table__cell= customer.name
+                        td.table__cell= customer.company
+                        td.table__cell= customer.number
+                        td.table__cell= customer.email
+                        td.table__cell= customer.country
+                        td(class="table__cell table__cell--status")
+                            if customer.status == "Active"
+                                div(class="status status--active") Active
+                            else if customer.status == "Inactive"
+                                div(class="status status--inactive") Inactive

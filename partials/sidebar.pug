@@ -1,0 +1,31 @@
+include ../mixins/svg
+include ../mixins/navListItem
+
+block content
+    aside.sidebar
+        .sidebar-container 
+            a.sidebar__logo(href='index.html')
+                +svg('icon-logo', '37', '37')
+                p Dashboard 
+                    span.sidebar__span v.01
+
+            nav.nav
+                ul.nav-list
+                    +listItem('icon-stroke', 'icon-key', false)
+                        | Dashboard
+                    +listItem('icon-fill', 'icon-cube')
+                        | Product
+                    +listItem('icon-stroke', 'icon-user', true, '#', 'nav-link--active')
+                        | Customers
+                    +listItem('icon-stroke', 'icon-wallet')
+                        | Income
+                    +listItem('icon-fill', 'icon-promote')
+                        | Promote
+                    +listItem('icon-fill', 'icon-help')
+                        | Help
+
+        .avatar
+            img.avatar__image(src="../images/avatar.png" width="42" height="42")
+            .avatar-description
+                p.avatar-description__name Evano
+                p.avatar-description__position Project Manager

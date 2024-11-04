@@ -1,0 +1,13 @@
+mixin listItem(classNameIcon, iconId, isArrow = true, href = "#", className = "")
+    li.nav-list__item
+        a.nav-link(class=className href=href)
+            .nav-link-container
+                svg(class=`nav-link__icon nav-link__${classNameIcon}` width='24' height='24')
+                    use(href=`../images/icons.svg#${iconId}`)
+
+                p
+                    block
+
+            if isArrow
+                svg(class='nav-link__icon nav-link__icon-stroke' width='16' height='16')
+                    use(href='../images/icons.svg#icon-arrow-right') 

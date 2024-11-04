@@ -1,0 +1,145 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 94%;
+  padding: 24px 14px;
+
+  background-color: #fff;
+}
+
+.sidebar__logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 48px;
+
+  color: inherit;
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: 0.01em;
+
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar__logo:hover,
+.sidebar__logo:focus {
+  transform: scale(1.1);
+}
+
+.sidebar__span {
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: -0.01em;
+  color: #838383;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.nav-list__item {
+  display: flex;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 8px;
+  padding: 11px;
+  fill: transparent;
+  stroke: transparent;
+  color: #9197b3;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link__icon-stroke {
+  fill: none;
+  stroke: #9197b3;
+}
+
+.nav-link__icon-fill {
+  fill: #9197b3;
+  stroke: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #fff;
+  background-color: #5932ea;
+}
+
+.nav-link:hover .nav-link__icon-stroke,
+.nav-link:focus .nav-link__icon-stroke {
+  stroke: #fff;
+}
+
+.nav-link:hover .nav-link__icon-fill,
+.nav-link:focus .nav-link__icon-fill {
+  fill: #fff;
+}
+
+.nav-link--active {
+  color: #fff;
+  background-color: #5932ea;
+  stroke: #fff;
+}
+
+.nav-link--active .nav-link__icon-stroke,
+.nav-link--active .nav-link__icon-stroke {
+  stroke: #fff;
+}
+
+.nav-link--active .nav-link__icon-fill,
+.nav-link--active .nav-link__icon-fill {
+  fill: #fff;
+}
+
+.nav-link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  display: flex;
+  gap: 12px;
+}
+
+.avatar-description__name {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+
+.avatar-description__position {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    max-width: 306px;
+    width: 306px;
+    height: 100vh;
+    padding: 36px 28px 72px;
+  }
+}

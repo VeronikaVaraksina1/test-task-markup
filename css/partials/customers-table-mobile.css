@@ -1,0 +1,65 @@
+@media screen and (max-width: 767px) {
+  .table-mobile__container {
+    padding: 8px;
+    padding-bottom: 30px;
+    background: #fff;
+  }
+
+  .table-mobile {
+    margin: 0 auto;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    border-collapse: collapse;
+  }
+
+  .table-mobile__header {
+    color: #b5b7c0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .table-mobile__cell {
+    padding: 10px 10px;
+    border-bottom: 1px solid #eee;
+    color: #292d32;
+  }
+
+  .table-mobile__cell--header {
+    padding: 10px 10px;
+    font-weight: 500;
+    text-align: start;
+  }
+
+  .table-mobile__cell--status {
+    text-align: center;
+  }
+
+  .table-mobile__cell > .status {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  .table-mobile__cell > .status--active {
+    border: 1px solid #00b087;
+    background-color: rgba(22, 192, 152, 0.38);
+  }
+
+  .table-mobile__cell > .status--inactive {
+    border: 1px solid #df0404;
+    background-color: #ffc5c5;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .table-mobile {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .table-mobile__container {
+    display: none;
+  }
+}

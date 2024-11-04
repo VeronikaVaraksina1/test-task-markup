@@ -1,0 +1,45 @@
+@media screen and (max-width: 1023px) {
+  .header {
+    position: relative;
+  }
+
+  .header__sidebar {
+    display: none;
+  }
+
+  .header__mobile-menu {
+    display: block;
+  }
+
+  .button-open-mobile-menu {
+    position: absolute;
+    top: 14px;
+    right: 24px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .button-open-mobile-menu:hover,
+  .button-open-mobile-menu:focus {
+    fill: #9197b3;
+    stroke: #9197b3;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .button-open-mobile-menu {
+    padding: 10px 14px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__sidebar {
+    display: block;
+  }
+
+  .header__mobile-menu {
+    display: none;
+  }
+}

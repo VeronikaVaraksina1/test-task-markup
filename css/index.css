@@ -1,0 +1,10 @@
+@import "./common.css";
+@import "./variables.css";
+
+@import "./pages/customers-page.css";
+
+@import "./partials/header.css";
+@import "./partials/sidebar.css";
+@import "./partials/mobile-menu.css";
+@import "./partials/customers-table-mobile.css";
+@import "./partials/customers-table.css";

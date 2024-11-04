@@ -1,0 +1,11 @@
+include ../mixins/svg
+
+block content 
+    header.header
+        .header__sidebar 
+            include sidebar
+        .header__mobile-menu
+            button.button-open-mobile-menu(type="button")
+                +svg("icon-open-menu", "24", "24")
+
+            include mobile-menu
