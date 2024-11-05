@@ -4,24 +4,24 @@ include ../mixins/navListItem
 block content
     aside.sidebar
         .sidebar-container 
-            a.sidebar__logo(href='index.html')
-                +svg('icon-logo', '37', '37')
+            a.sidebar__logo(href="index.html")
+                +svg("icon-logo", "37", "37")
                 p Dashboard 
                     span.sidebar__span v.01
 
             nav.nav
                 ul.nav-list
-                    +listItem('icon-stroke', 'icon-key', false)
+                    +navListItem("icon-stroke", "icon-key", false)
                         | Dashboard
-                    +listItem('icon-fill', 'icon-cube')
+                    +navListItem("icon-fill", "icon-cube")
                         | Product
-                    +listItem('icon-stroke', 'icon-user', true, '#', 'nav-link--active')
+                    +navListItem("icon-stroke", "icon-user", true, "#", "nav-link--active")
                         | Customers
-                    +listItem('icon-stroke', 'icon-wallet')
+                    +navListItem("icon-stroke", "icon-wallet")
                         | Income
-                    +listItem('icon-fill', 'icon-promote')
+                    +navListItem("icon-fill", "icon-promote")
                         | Promote
-                    +listItem('icon-fill', 'icon-help')
+                    +navListItem("icon-fill", "icon-help")
                         | Help
 
         .avatar

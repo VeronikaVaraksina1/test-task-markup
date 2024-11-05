@@ -8,6 +8,13 @@
   padding: 20px 8px;
   font-weight: 500;
   font-size: 24px;
+  transform: scale(0.8);
+}
+
+.customers-page__container {
+  position: relative;
+  bottom: -30px;
+  right: -30px;
 }
 
 .customers__container {
